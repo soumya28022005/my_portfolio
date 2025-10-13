@@ -79,10 +79,9 @@ header nav ul li a:hover { color: var(--accent-color); }
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    /* Change Starts Here: Increased top padding for more gap */
-    padding-top: calc(var(--header-height) + 30px);
-    /* Change Ends Here */
+    /* The padding-top now controls the gap directly */
+    padding-top: calc(var(--header-height) + 40px);
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
 }
 
 .hero-content {
@@ -221,14 +220,17 @@ footer .fa-heart { color: var(--accent-color); }
     header nav ul { flex-direction: column; width: 100%; }
     header nav ul li { margin: 15px 0; text-align: center; }
     .menu-toggle { display: block; }
+
+    /* Increased top padding for more gap on mobile */
+    .hero {
+        padding-top: calc(var(--header-height) + 30px);
+    }
     
-    /* Change Starts Here: Reverted mobile layout */
     .hero-content {
         flex-direction: column-reverse; 
         text-align: center;
         gap: 30px; 
     }
-    /* Change Ends Here */
 
     .hero-text h3 {
         font-size: 1.2rem;
