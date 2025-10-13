@@ -58,55 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.close-btn');
     const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
 
-    const projectData = {
-        "Doctor Appointment": {
-            why: "To provide a seamless and user-friendly interface for patients to book appointments with doctors. This improves efficiency and reduces manual booking efforts for hospital staff.",
-            features: [
-                "View detailed doctor profiles and specializations.",
-                "Check doctor availability and select a suitable time slot.",
-                "Responsive design for access on any device (mobile, tablet, desktop).",
-                "Simple and intuitive booking process."
-            ],
-            tech: ["HTML5", "CSS3", "JavaScript"],
-            liveDemo: "https://soumya28022005.github.io/soumya_doctor_frontend/",
-            githubRepo: "https://github.com/soumya28022005/soumya_doctor_frontend"
-        }
-        // Add data for other projects here
-    };
 
     viewDetailsBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const projectCard = btn.closest('.project-card');
-            // Change Here: Added .trim() to remove extra whitespace from the title
-            const title = projectCard.querySelector('h3').textContent.trim();
-            const data = projectData[title];
-
-            if (data) {
-                document.getElementById('modalTitle').textContent = title;
-                document.getElementById('modalWhy').textContent = data.why;
-
-                const featuresList = document.getElementById('modalFeatures');
-                featuresList.innerHTML = '';
-                data.features.forEach(feature => {
-                    const li = document.createElement('li');
-                    li.textContent = feature;
-                    featuresList.appendChild(li);
-                });
-
-                const techContainer = document.getElementById('modalTech');
-                techContainer.innerHTML = '';
-                data.tech.forEach(techItem => {
-                    const span = document.createElement('span');
-                    span.className = 'tech-tag';
-                    span.textContent = techItem;
-                    techContainer.appendChild(span);
-                });
-                
-                modal.style.display = 'block';
-            } else {
-                console.error("Data not found for title:", `'${title}'`);
-            }
-        });
+            modal.style.display = 'block';
+           });
     });
 
     closeBtn.addEventListener('click', () => {

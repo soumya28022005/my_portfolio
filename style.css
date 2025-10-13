@@ -185,12 +185,28 @@ footer .fa-heart { color: var(--accent-color); }
 
 /* Modal */
 .modal {
-    display: none; position: fixed; z-index: 101; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7);
+    display: none; 
+    position: fixed; 
+    z-index: 121; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7);
     animation: fadeIn 0.3s;
 }
 .modal-content {
-    background: var(--primary-dark); color: var(--text-primary); margin: 10% auto; padding: 40px; border: 1px solid var(--secondary-dark);
-    width: 90%; max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
+    background: var(--primary-dark); 
+    color: var(--text-primary); 
+    margin: 10% auto; 
+    padding: 40px; 
+    border: 1px solid var(--secondary-dark);
+    width: 90%; 
+    max-width: 700px; 
+    border-radius: 10px; 
+    position: relative; 
+    animation: slideIn 0.4s;
 }
 .close-btn { color: #aaa; position: absolute; top: 20px; right: 30px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s; }
 .close-btn:hover { color: var(--accent-color); }
