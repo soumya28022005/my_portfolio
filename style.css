@@ -88,9 +88,10 @@ header nav ul li a:hover { color: var(--accent-color); }
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    width: 100%;
 }
 .hero-text { flex: 1; }
-.hero-text h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); }
+.hero-text h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin: 0; }
 .hero-text h1 { font-size: 3.5rem; margin: 10px 0; }
 .hero-text h2 { font-size: 2rem; color: var(--accent-color); }
 .typing { font-weight: 600; }
@@ -219,10 +220,32 @@ footer .fa-heart { color: var(--accent-color); }
     header nav ul li { margin: 15px 0; text-align: center; }
     .menu-toggle { display: block; }
     
-    .hero-content { flex-direction: column-reverse; text-align: center; }
-    .hero-text h1 { font-size: 2.8rem; }
-    .hero-text h2 { font-size: 1.8rem; }
-    .hero-img { width: 250px; height: 250px; }
+    .hero-content {
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px; 
+    }
+
+    .hero-image {
+        margin-top: 20px; /* Add some space at the top */
+    }
+
+    /* Change Starts Here */
+    .hero-text h3 {
+        font-size: 1.2rem; /* "Hello, I'm"  */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; 
+        margin: 5px 0 10px 0; 
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem; 
+    }
+   
+
+    .hero-img { width: 220px; height: 220px; } 
     
     section h2 { font-size: 2.2rem; }
     .skills-grid { grid-template-columns: 1fr; }
