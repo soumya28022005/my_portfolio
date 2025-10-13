@@ -282,24 +282,15 @@ footer .fa-heart { color: var(--accent-color); }
     section h2 { font-size: 2.2rem; }
     .skills-grid { grid-template-columns: 1fr; }
 
-    /* --- Modal Adjustments for Mobile --- */
-    .modal {
-        /* This helps in better centering */
-        display: none; /* Keep it hidden by default */
-        align-items: center;
-        justify-content: center;
-    }
-    .modal.active {
-        display: flex; /* Use flex to show and center */
-    }
+    /* --- Final Solution for Mobile Modal --- */
     .modal-content {
-        margin: 20px; /* Use simple margin instead of percentage */
-        max-height: 85vh; /* Limit the height to 85% of the screen height */
-        overflow-y: auto; /* Add a vertical scrollbar if content overflows */
-        padding: 25px; /* Reduce padding on smaller screens */
+        margin: 20px auto; /* ওপর-নিচে এবং ডানে-বামে একটু ফাঁকা জায়গা */
+        max-height: 85vh;  /* উচ্চতা স্ক্রিনের ৮৫% এর বেশি হবে না */
+        overflow-y: auto;  /* লেখা বেশি হলে ভেতরে স্ক্রলবার আসবে */
+        padding: 25px;     /* ভেতরের প্যাডিং কমানো হলো */
     }
 
     .modal-body h1 {
-        font-size: 1.8rem; /* Make title smaller on mobile */
+        font-size: 1.8rem; /* মোবাইলের জন্য শিরোনাম ছোট করা হলো */
     }
 }
