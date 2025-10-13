@@ -189,7 +189,7 @@ footer .fa-heart { color: var(--accent-color); }
 }
 .modal-content {
     background: var(--primary-dark); color: var(--text-primary); margin: 10% auto; padding: 40px; border: 1px solid var(--secondary-dark);
-    width: 80%; height: 80% ; max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
+    width: 80%;  max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
 }
 .close-btn { color: #aaa; position: absolute; top: 20px; right: 30px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s; }
 .close-btn:hover { color: var(--accent-color); }
