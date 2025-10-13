@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
 
     const projectData = {
-        "Doctor Appointment Frontend": {
+        "Doctor Appointment": {
             why: "To provide a seamless and user-friendly interface for patients to book appointments with doctors. This improves efficiency and reduces manual booking efforts for hospital staff.",
             features: [
                 "View detailed doctor profiles and specializations.",
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     viewDetailsBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const projectCard = btn.closest('.project-card');
-            const title = projectCard.querySelector('h3').textContent;
+            // Change Here: Added .trim() to remove extra whitespace from the title
+            const title = projectCard.querySelector('h3').textContent.trim();
             const data = projectData[title];
 
             if (data) {
@@ -102,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 
                 modal.style.display = 'block';
+            } else {
+                console.error("Data not found for title:", `'${title}'`);
             }
         });
     });
