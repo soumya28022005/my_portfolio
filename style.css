@@ -80,7 +80,9 @@ header nav ul li a:hover { color: var(--accent-color); }
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: var(--header-height);
+    /* Change Starts Here: Increased top padding for more gap */
+    padding-top: calc(var(--header-height) + 30px);
+    /* Change Ends Here */
 }
 
 .hero-content {
@@ -220,33 +222,28 @@ footer .fa-heart { color: var(--accent-color); }
     header nav ul li { margin: 15px 0; text-align: center; }
     .menu-toggle { display: block; }
     
+    /* Change Starts Here: Reverted mobile layout */
     .hero-content {
-        flex-direction: column; 
+        flex-direction: column-reverse; 
         text-align: center;
         gap: 30px; 
     }
+    /* Change Ends Here */
 
-    .hero-image {
-        margin-top: 20px; /* Add some space at the top */
-        margin-bottom: 20px;
-    }
-
-    /* Change Starts Here */
     .hero-text h3 {
-        font-size: 1.2rem; /* "Hello, I'm"  */
+        font-size: 1.2rem;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem; 
-        margin: 5px 0 10px 0; 
+        font-size: 2.5rem;
+        margin: 5px 0 10px 0;
     }
 
     .hero-text h2 {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
     }
-   
 
-    .hero-img { width: 220px; height: 220px; } 
+    .hero-img { width: 220px; height: 220px; }
     
     section h2 { font-size: 2.2rem; }
     .skills-grid { grid-template-columns: 1fr; }
