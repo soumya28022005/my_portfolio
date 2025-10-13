@@ -228,6 +228,7 @@ footer .fa-heart { color: var(--accent-color); }
 
     .hero-image {
         margin-top: 20px; /* Add some space at the top */
+        margin-bottom: 20px;
     }
 
     /* Change Starts Here */
