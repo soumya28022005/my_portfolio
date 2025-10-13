@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumya Chatterjee | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">&lt;SC /&gt;</a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h3>Hello, I'm</h3>
+                <h1>Soumya Chatterjee</h1>
+                <h2>And I'm a <span class="typing"></span></h2>
+                <div class="social-links">
+                    <a href="https://github.com/soumya28022005" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/soumya-chatterjee-76754a2b2/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/soumyachatterjee051/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="./WhatsApp Image 2025-10-14 at 00.12.45.jpeg" alt="Soumya Chatterjee" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate Full Stack Developer based in Durgapur, India. With a strong foundation in both frontend and backend technologies, I specialize in building robust and scalable web applications. My goal is to leverage my skills to create efficient, user-friendly, and impactful digital solutions. I am a quick learner, always eager to embrace new challenges and technologies.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li><i class="fas fa-code"></i> C</li>
+                        <li><i class="fas fa-code"></i> C++</li>
+                        <li><i class="fab fa-java"></i> Java</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                        <li><i class="fas fa-leaf"></i> EJS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="fade-in">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="card-container">
+                <div class="project-card">
+                    <h3>Doctor Appointment Frontend</h3>
+                    <p>A responsive frontend for a healthcare platform.</p>
+                    <div class="project-links">
+                        <a href="https://soumya28022005.github.io/soumya_doctor_frontend/" target="_blank" class="btn">Live Demo</a>
+                        <button class="btn btn-secondary view-details-btn">View Details</button>
+                    </div>
+                </div>
+                <!-- Add more project cards here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">I'm currently open to new opportunities. Feel free to contact me!</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Durgapur, West Bengal, India</li>
+                <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/qr/T2UPM72BWBJFK1" target="_blank">Message on WhatsApp</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:soumyachatterjee2802@gmail.com">soumyachatterjee2802@gmail.com</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Soumya Chatterjee. Built with <i class="fas fa-heart"></i> and code.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-body">
+                <h3>Why Use This?</h3>
+                <p id="modalWhy"></p>
+                <h3>Key Features</h3>
+                <ul id="modalFeatures"></ul>
+                <h3>Technologies Used</h3>
+                <div id="modalTech" class="tech-tags"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
