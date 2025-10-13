@@ -184,27 +184,12 @@ footer .fa-heart { color: var(--accent-color); }
 
 /* --- Modal Styling Starts Here --- */
 .modal {
-    display: none; 
-    position: fixed; z-index: 101;
-     left: 0; 
-     top: 0; 
-     width: 100%; 
-     height: 100%; 
-     overflow: auto; 
-     background-color: rgba(0,0,0,0.7);
+    display: none; position: fixed; z-index: 101; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7);
     animation: fadeIn 0.3s;
 }
 .modal-content {
-    background: var(--primary-dark); 
-    color: var(--text-primary); 
-    margin: 10% auto; 
-    padding: 40px; 
-    border: 1px solid var(--secondary-dark);
-    width: 90%; 
-    max-width: 700px; 
-    border-radius: 10px; 
-    position: relative; 
-    animation: slideIn 0.4s;
+    background: var(--primary-dark); color: var(--text-primary); margin: 10% auto; padding: 40px; border: 1px solid var(--secondary-dark);
+    width: 90%; max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
 }
 .close-btn { color: #aaa; position: absolute; top: 20px; right: 30px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s; }
 .close-btn:hover { color: var(--accent-color); }
@@ -296,5 +281,25 @@ footer .fa-heart { color: var(--accent-color); }
     
     section h2 { font-size: 2.2rem; }
     .skills-grid { grid-template-columns: 1fr; }
-}
 
+    /* --- Modal Adjustments for Mobile --- */
+    .modal {
+        /* This helps in better centering */
+        display: none; /* Keep it hidden by default */
+        align-items: center;
+        justify-content: center;
+    }
+    .modal.active {
+        display: flex; /* Use flex to show and center */
+    }
+    .modal-content {
+        margin: 20px; /* Use simple margin instead of percentage */
+        max-height: 85vh; /* Limit the height to 85% of the screen height */
+        overflow-y: auto; /* Add a vertical scrollbar if content overflows */
+        padding: 25px; /* Reduce padding on smaller screens */
+    }
+
+    .modal-body h1 {
+        font-size: 1.8rem; /* Make title smaller on mobile */
+    }
+}
