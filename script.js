@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', () => {
 
     // Typing animation
     if (document.querySelector('.typing')) {
@@ -115,5 +115,5 @@
             modal.style.display = 'none';
         }
     });
-
+});
 
