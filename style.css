@@ -175,8 +175,20 @@ section h2::after { content: ''; display: block; width: 80px; height: 4px; backg
 #contact ul { list-style: none; padding: 0; text-align: center; max-width: 500px; margin: 0 auto; }
 #contact ul li { margin-bottom: 20px; font-size: 1.2rem; }
 #contact ul li i { color: var(--accent-color); margin-right: 15px; width: 20px; }
-#contact a { color: var(--text-primary); text-decoration: none; transition: color 0.3s; }
-#contact a:hover { color: var(--accent-color); }
+
+/* --- Change Starts Here --- */
+#contact a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-color); /* Add a dashed underline */
+    padding-bottom: 3px; /* Add space between text and underline */
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+#contact a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color); /* Underline color changes on hover */
+}
+/* --- Change Ends Here --- */
 
 /* Footer */
 footer { text-align: center; padding: 25px; background: var(--primary-dark); border-top: 1px solid var(--secondary-dark); }
@@ -189,7 +201,7 @@ footer .fa-heart { color: var(--accent-color); }
 }
 .modal-content {
     background: var(--primary-dark); color: var(--text-primary); margin: 10% auto; padding: 40px; border: 1px solid var(--secondary-dark);
-    width: 80%;  max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
+    width: 90%; max-width: 700px; border-radius: 10px; position: relative; animation: slideIn 0.4s;
 }
 .close-btn { color: #aaa; position: absolute; top: 20px; right: 30px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s; }
 .close-btn:hover { color: var(--accent-color); }
@@ -284,13 +296,14 @@ footer .fa-heart { color: var(--accent-color); }
 
     /* --- Final Solution for Mobile Modal --- */
     .modal-content {
-        margin: 20px auto; /* ওপর-নিচে এবং ডানে-বামে একটু ফাঁকা জায়গা */
-        max-height: 85vh;  /* উচ্চতা স্ক্রিনের ৮৫% এর বেশি হবে না */
-        overflow-y: auto;  /* লেখা বেশি হলে ভেতরে স্ক্রলবার আসবে */
-        padding: 25px;     /* ভেতরের প্যাডিং কমানো হলো */
+        margin: 20px auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 25px;
     }
 
     .modal-body h1 {
-        font-size: 1.8rem; /* মোবাইলের জন্য শিরোনাম ছোট করা হলো */
+        font-size: 1.8rem;
     }
 }
+
